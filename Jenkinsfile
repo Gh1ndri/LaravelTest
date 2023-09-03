@@ -1,10 +1,10 @@
 pipeline {
-    agent any
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World layth hamza'
-            }
-        }
+  agent any
+  stages {
+    stage('Launch second Pipeline') {
+      steps {
+        build job: 'secondPipeline'
+      }
     }
+  }
 }
